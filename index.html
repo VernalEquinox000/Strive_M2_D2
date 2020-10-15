@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <!--
+<!--
  ASSIGNMENT RULES
  - The solution must be pushed to the repository and be available for the tutors by the end of the day.
  - You can ask for tutor's help.
@@ -19,25 +19,20 @@
  Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
  -->
 
- <html lang="en">
-   <head>
-     <meta charset="utf-8" />
-     <meta
-       name="viewport"
-       content="width=device-width, initial-scale=1, shrink-to-fit=no"
-     />
-     <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 
 
 
-     <style>
-         
-
-
-
-       /* EXERCISE 1
+    <style>
+        /* EXERCISE 1
              For all Albums we'd like to have a consistent style.
              Create a class for:
              - The album container
@@ -49,72 +44,69 @@
              - etc
           */
 
-          
-            
-
-            .card {
-                background-color:skyblue;
-            }
-
-            .card-img-top {
-                border: 10px yellow;
-            }
-
-            .artist {
-                font-weight: bolder;
-            }
-
-            .title {
-                font-size: 2em;
-            }
-
-            .label 
-            {
-                font-weight: oblique;
-            }
-
-            #aenima-review {
-                
-                margin-top: 50px; 
-                margin-left: 10px;
-                heigt: 10vh;
-                background-color:skyblue;
-                }
-
-            
-
-            p {
-                text-align: justify;
-                background-color: white;
-            }
-            
 
 
 
-     </style>
-   </head>
-   <body>
-    
-     <!-- EXERCISE 2 
+        .card {
+            background-color: skyblue;
+        }
+
+        .card-img-top {
+            border: 10px yellow;
+        }
+
+        .artist {
+            font-weight: bolder;
+        }
+
+        .title {
+            font-size: 2em;
+        }
+
+        .label {
+            font-weight: oblique;
+        }
+
+        #aenima-review {
+
+            margin-top: 50px;
+            margin-left: 10px;
+            heigt: 10vh;
+            background-color: skyblue;
+        }
+
+
+
+        p {
+            text-align: justify;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- EXERCISE 2 
              Implement a navigation bar using the bootstrap component
              This navigation bar must be linked to every section in your page
          -->
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
                 <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-link" href="#top-album">Best Albums</a>
                 <a class="nav-link" href="#aenima-review">Review</a>
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </div>
             </div>
-          </nav>
+        </div>
+    </nav>
 
-     <!-- EXERCISE 3
+    <!-- EXERCISE 3
              Create a responsive section for your favourite albums.
              In this section you should have:
              - 4 albums per row when the screen is very large
@@ -122,246 +114,269 @@
              - 2 albums per row when you are on a small screen
      -->
 
-            
-            <div class="container">
 
-                <div id="top-album" class="row text-center mt-3">
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">#1</h5>
-                              <p class="card-text">Tool's finest moment</p>
-                            </div>
-                              <h2 class="artist">Tool</h2>
-                              <h3 class="title">Aenima</h3>
-                              <h4 class="label">Volcano</h4>
-                            <div class="card-body">
-                              <a href="#aenima-review" class="review-link">My review</a> |||
-                              <a href="https://toolband.com" target="blank" class="site-link">Official site</a>
-                            </div>
-                          </div>
+    <div class="container mx-1">
+
+        <div id="top-album" class="row text-center mt-3">
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">#1</h5>
+                        <p class="card-text">Tool's finest moment</p>
                     </div>
-
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
-                    </div>
-
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
-                    </div>
-
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
+                    <h2 class="artist">Tool</h2>
+                    <h3 class="title">Aenima</h3>
+                    <h4 class="label">Volcano</h4>
+                    <div class="card-body">
+                        <a href="#aenima-review" class="review-link">My review</a> |||
+                        <a href="https://toolband.com" target="blank" class="site-link">Official site</a>
                     </div>
                 </div>
+            </div>
 
-
-                <div class="row text-center mt-3">
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
                     </div>
-
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
-                    </div>
-
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
-                    </div>
-
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
+            </div>
 
-
-                <div class="row text-center mt-3">
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
                     </div>
-
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
-                    </div>
-
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
-                    </div>
-
-                    <div class="col col-6 col-md-4 col-lg-3">
-                        <div class="card mx auto" style="width: 18rem;">
-                            <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg" class="card-img-top" alt="Aenima">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
-           
-        
+            </div>
 
-     <!-- EXERCISE 4
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row text-center mt-3">
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row text-center mt-3">
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- EXERCISE 4
              Create a section for the album review.
              Pick one of your fav albums, and create a section with:
              - Cover
@@ -372,62 +387,155 @@
              - Tracklist
              - ... And whatever you think it's interesting about it!
          -->
-         
-            <div id="aenima-review" class="row text-center mt-3">
-                 <div class="col col-12">
-                    <div class="img-container">
-                        <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"  alt="Aenima">
-                    </div>
-                    <h2>Tool</h2>
-                    <h3>Aenima</h3>
-                    <h4>Vulcano - 1996</h4>
-                    
-                    <p class="text-review">Tool emerged from the alternative scene in early '90s and after an ep and their debut album, after their first and to date only change in the lineup (English-born bassist Justin Chancellor
-                    entered the band after Paul D'Amour left) and went on to release "Aenima" in 1996. The album was released on lp and cd from Volcano Records, the vinyl is unavailable and a much sought gem 
-                    by collectors. The smashing first track "Stinkfist", released as single with the hallucinating video directed by guitarist Adam Jones, who worked as makeup artist for Hollywood movies, is 
-                    just the first punch of an album which has its best moment with "46&2", "Aenema", "Hooker With a Penis" along with crazy short tracks like "Message to Harry Manback". A true masterpiece 
-                    which boosted Tool's career before their much acclaimed follow up "Lateralus".
+
+        <div id="aenima-review" class="row text-center mx-1 mt-3">
+            <div class="col col-12">
+                <div class="img-container">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        alt="Aenima">
                 </div>
+                <h2>Tool</h2>
+                <h3>Aenima</h3>
+                <h4>Vulcano - 1996</h4>
+
+                <p class="text-review">Tool emerged from the alternative scene in early '90s and after an ep and their
+                    debut album, after their first and to date only change in the lineup (English-born bassist Justin
+                    Chancellor
+                    entered the band after Paul D'Amour left) and went on to release "Aenima" in 1996. The album was
+                    released on lp and cd from Volcano Records, the vinyl is unavailable and a much sought gem
+                    by collectors. The smashing first track "Stinkfist", released as single with the hallucinating video
+                    directed by guitarist Adam Jones, who worked as makeup artist for Hollywood movies, is
+                    just the first punch of an album which has its best moment with "46&2", "Aenema", "Hooker With a
+                    Penis" along with crazy short tracks like "Message to Harry Manback". A true masterpiece
+                    which boosted Tool's career before their much acclaimed follow up "Lateralus".
             </div>
-         </div>
-     <!-- EXERCISE 5
+        </div>
+    </div>
+    <!-- EXERCISE 5
              Worst album list! Find out the music you don't really like or you find overrated and list it
              in this "hall of shame" chart!
          -->
 
-         
+    <div class="container mx-1">
+        <div class="row text-center mt-3">
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-6 col-md-4 col-lg-3">
+                <div class="card mx auto" style="width: 18rem;">
+                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
+                        class="card-img-top" alt="Aenima">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-     <!-- EXERCISE 6
+
+        <!-- EXERCISE 6
              Do you have any musician / band you admire or you are fan of?
              This section is dedicated to him / her / them!
              Feel free to experiment in this part of the page.
          -->
 
-     <!-- EXERCISE 7
+        <!-- EXERCISE 7
              Just covers!
              Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
              Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
          -->
 
-     <!-- EXERCISE 8
+        <!-- EXERCISE 8
              Implement a footer with some information / social links
          -->
 
-     <!-- EXTRA:
+        <!-- EXTRA:
           EXERCISE 9
              Create album details that are going to be toggled on and off by clicking on the album image
          -->
 
-     <!-- EXERCISE 10
+        <!-- EXERCISE 10
              Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
          -->
 
-     <!--
+        <!--
              EXERCISE 11
              Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
          -->
-        
 
-   </body>
- </html>
+
+</body>
+
+</html>
