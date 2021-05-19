@@ -45,10 +45,12 @@
           */
 
 
-
+        
 
         .card {
             background-color: skyblue;
+            width: 15rem; 
+            height:25rem;
         }
 
         .card-img-top {
@@ -71,11 +73,11 @@
 
             margin-top: 50px;
             margin-left: 10px;
-            heigt: 10vh;
+            height: 10vh;
             background-color: skyblue;
         }
 
-
+        div img {width:250px;}
 
         p {
             text-align: justify;
@@ -86,11 +88,105 @@
 
 <body>
 
-    <!-- EXERCISE 2 
-             Implement a navigation bar using the bootstrap component
-             This navigation bar must be linked to every section in your page
-         -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- #####################################M2D9 M2D9 M2D9 M2D9########################################
+            EXERCISE 1
+                 Use the specific bootstrap component to implement a Breadcrumb
+                 -->
+
+        
+        <!-- EXERCISE 2
+                     Create a Jumbotron section with a quick explanation / image of the website
+                 -->
+        
+        <!-- EXERCISE 3
+                     Foreach album in the favorite list, place the genre inside a badge
+                 -->
+        
+        <!-- EXERCISE 4
+                     Foreach album in the favorite list, use the Bootstrap Card to contain it.
+                     Use card layouts to format it in the best and more compatible way.
+                 -->
+        
+        <!-- EXERCISE 5
+                     Place the tracklist inside a Bootstrap table.
+                     The row column must be alternate.
+                     Use one column for the track order, one of the title and one for the length.
+                     (If you want, you can also add extra columns)
+                 -->
+        
+        <!-- EXERCISE 6
+                     Add a DELETE bootstrap button on each row of the tracklist, with appropriate transitions on the various pseudo-class states 
+                     which will apply for the subsequent button you'll use.
+                     Clicking on the button the row must disappear. 
+                     Add a fade-out effect using a CSS transition effect
+                 -->
+        
+        <!-- EXERCISE 7
+                     Add a "Contact Me" form in the footer.
+                     The "Contact Me" form has 2 fields:
+                     - Email
+                     - Text of the message
+                     Use the correct Bootstrap styles for styling the buttons
+                 -->
+        
+        <!-- EXERCISE 8 
+                     Add to the footer an extra column with the same links of the top nav.
+                 -->
+        
+        <!-- EXERCISE 9
+                     Add a button "Add Track" under the track list the album, add a nice shadow transition when the button is hovered
+                 -->
+        
+        <!-- EXERCISE 10
+                     On "Add Track" button, open a new modal.
+                     The modal shall contain a form with:
+                     - Track number
+                     - Track name
+                     - Track length
+                     - Track featuring
+                     - Live Track (checkbox)
+                     The fields should be inside an Input Group and divided in 2 columns.
+                 -->
+        
+        <!-- EXERCISE 11
+                     Add 2 bootstrap buttons at the bottom of the modal window:
+                     - Close => clear the fields and close the modal
+                     - Add => Add the track to the list of tracks in the main page and display an alert success message 
+                     - The new list-element added to the list will appear with a fade-in transition effect
+                     https://getbootstrap.com/docs/4.4/components/alerts/
+                     [EXTRA] Make the message disappear after 5 seconds
+                     https://www.w3schools.com/jsref/met_win_settimeout.asp
+                 -->
+        
+        <!-- EXERCISE 12
+                     All the field (except for Feat. and Live Track) are required fields and requires validation.
+                     If the user clicks on the Add button and some fields are empty, a warning alert must be show
+                 -->
+        
+        <!-- ############### -->
+        <!-- ###  EXTRA  ### -->
+        <!-- ############### -->
+        
+        <!-- EXERCISE 13
+                     For each "Album cover" in your page, add a tooltip with the title
+                 -->
+        
+        <!-- EXERCISE 14
+                     Update the header and footer links using scrollspy to render a smooth transition to the parts of the document.
+                 -->
+        
+        <!-- EXERCISE 15
+                     Add a Album Carousel with controls to display the top 10 albums
+                 -->
+        
+        <!-- EXERCISE 16
+                     Make every section of the page "collapsable" if the user clicks on the section title
+                 #####################################M2D9 M2D9 M2D9 M2D9########################################-->
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,6 +202,30 @@
         </div>
     </nav>
 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
+    
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+    </nav>
+    
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+    </nav>
+
+
+
+
     <!-- EXERCISE 3
              Create a responsive section for your favourite albums.
              In this section you should have:
@@ -114,43 +234,28 @@
              - 2 albums per row when you are on a small screen
      -->
 
-
-    <div class="container mx-1">
-
+     <!--container-->
+    <div class="container-fluid mx-1">
+        <!--first row-->
         <div id="top-album" class="row text-center mt-3">
             <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
+                <div class="card">
+                    <img src="./pics/aenima.jpg" class="card-img-top" alt="Aenima">
                     <div class="card-body">
-                        <h5 class="card-title">#1</h5>
-                        <p class="card-text">Tool's finest moment</p>
-                    </div>
-                    <h2 class="artist">Tool</h2>
-                    <h3 class="title">Aenima</h3>
-                    <h4 class="label">Volcano</h4>
-                    <div class="card-body">
-                        <a href="#aenima-review" class="review-link">My review</a> |||
-                        <a href="https://toolband.com" target="blank" class="site-link">Official site</a>
+                        <h5 class="card-title">Aenima</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Tool</h6>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
-            </div>
-
+            </div>      
+            
             <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
+                <div class="card">
+                    <img src="./pics/13.jpg" class="card-img-top" alt="13">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
+                        <h5 class="card-title">13</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Blur</h6>
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
@@ -158,20 +263,11 @@
             </div>
 
             <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
+                <div class="card">
+                    <img src="./pics/cure_for_pain.jpg" class="card-img-top" alt="Cure For Pain">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
+                        <h5 class="card-title">Cure For Pain</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Morphine</h6>
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
@@ -179,107 +275,62 @@
             </div>
 
             <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
+                <div class="card">
+                    <img src="./pics/deloused_in_the_ccomatorium.jpg" class="card-img-top" alt="DITC">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
+                        <h5 class="card-title">De-Loused In The Comatorium</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">The Mars Volta</h6>
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
             </div>
-        </div>
+        <!--</div>-->
 
-
-        <div class="row text-center mt-3">
+        <!--second row-->
+        <!--<div id="top-album" class="row text-center mt-3">-->
             <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
+                <div class="card" style="width: 15rem; height:25rem">
+                    <img src="./pics/gentlemen.jpg" class="card-img-top" alt="Gentlemen">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
+                        <h5 class="card-title">Gentlemen</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">The Afghan Whigs</h6>
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
             </div>
-
+        
             <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
+                <div class="card">
+                    <img src="./pics/london_calling.jpg" class="card-img-top" alt="London Calling">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
+                        <h5 class="card-title">London Calling</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">The Clash</h6>
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
             </div>
-
+        
             <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
+                <div class="card">
+                    <img src="./pics/man_machine.jpg" class="card-img-top" alt="The Man Machine">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
+                        <h5 class="card-title">The Men Machine</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Kraftwerk</h6>
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
             </div>
-
+        
             <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
+                <div class="card">
+                    <img src="./pics/mirrored.jpg" class="card-img-top" alt="Mirrored">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
+                        <h5 class="card-title">Mirrored</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Battles</h6>
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
@@ -287,92 +338,161 @@
             </div>
         </div>
 
-
-        <div class="row text-center mt-3">
-            <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+        <!--third row-->
+                <div id="top-album" class="row text-center mt-3">
+                    <div class="col col-6 col-md-4 col-lg-3">
+                        <div class="card">
+                            <img src="./pics/nervous_circuits.jpg" class="card-img-top" alt="Nervous Circuits">
+                            <div class="card-body">
+                                <h5 class="card-title">Nervous Circuits</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">The VSS</h6>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                
+                    <div class="col col-6 col-md-4 col-lg-3">
+                        <div class="card">
+                            <img src="./pics/quello_che_non_ce.jpg" class="card-img-top" alt="Quello che non c'è">
+                            <div class="card-body">
+                                <h5 class="card-title">Quello che non c'è</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Afterhours</h6>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col col-6 col-md-4 col-lg-3">
+                        <div class="card">
+                            <img src="./pics/decade.jpg" class="card-img-top" alt="Decade">
+                            <div class="card-body">
+                                <h5 class="card-title">Decade</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Calibro 35</h6>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col col-6 col-md-4 col-lg-3">
+                        <div class="card">
+                            <img src="./pics/raw_power.jpg" class="card-img-top" alt="Raw Power">
+                            <div class="card-body">
+                                <h5 class="card-title">Raw Power</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Iggy & The Stooges</h6>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+    <!--fourth row-->
+            <div id="top-album" class="row text-center mt-3">
+                <div class="col col-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="./pics/tago_mago.jpg" class="card-img-top" alt="Tago Mago">
+                        <div class="card-body">
+                            <h5 class="card-title">Tago Mago</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">CAN</h6>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col col-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="./pics/silence_is_sexy.jpg" class="card-img-top" alt="Silence Is Sext">
+                        <div class="card-body">
+                            <h5 class="card-title">Silence is Sexy</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Einstürzende Neubauten</h6>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col col-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="./pics/the_queen_is_dead.jpg" class="card-img-top" alt="The Queen is Dead">
+                        <div class="card-body">
+                            <h5 class="card-title">The Queen is Dead</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">The Smiths</h6>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col col-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="./pics/the_real_thing.jpg" class="card-img-top" alt="The Real Thing">
+                        <div class="card-body">
+                            <h5 class="card-title">The Real Things</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Faith No More</h6>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
+            <!--fifth row-->
 
-            <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                    <div id="top-album" class="row text-center mt-3">
+                        <div class="col col-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <img src="./pics/unknown_pleasures.jpg" class="card-img-top" alt="Unknown Pleasures">
+                                <div class="card-body">
+                                    <h5 class="card-title">Unknown Pleasures</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Joy Division</h6>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col col-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <img src="./pics/smile.jpg" class="card-img-top" alt="Smile">
+                                <div class="card-body">
+                                    <h5 class="card-title">Smile</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Boris</h6>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col col-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <img src="./pics/before_and_after_dinner.jpg" class="card-img-top" alt="Before and After">
+                                <div class="card-body">
+                                    <h5 class="card-title">Before and After Dinner</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Rosolina Mar</h6>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col col-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <img src="./pics/carboniferous.jpg" class="card-img-top" alt="Carboniferous">
+                                <div class="card-body">
+                                    <h5 class="card-title">Carboniferous</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Zu</h6>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
 
 
 
@@ -416,92 +536,7 @@
              in this "hall of shame" chart!
          -->
 
-    <div class="container mx-1">
-        <div class="row text-center mt-3">
-            <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col col-6 col-md-4 col-lg-3">
-                <div class="card mx auto" style="width: 18rem;">
-                    <img src="https://cdn10.bigcommerce.com/s-99klc1qm/products/69700/images/112025/c0019221__54313.1571088019.500.750.jpg"
-                        class="card-img-top" alt="Aenima">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+   
 
 
 
@@ -534,7 +569,15 @@
              EXERCISE 11
              Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
          -->
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
 
 </body>
 
